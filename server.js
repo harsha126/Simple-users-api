@@ -1,9 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 if (typeof localStorage === "undefined" || localStorage === null) {
     var LocalStorage = require('node-localstorage').LocalStorage;
-    var localStorage = new LocalStorage('./data');
+    localStorage = new LocalStorage('./data');
 }
 
 const app = express();
